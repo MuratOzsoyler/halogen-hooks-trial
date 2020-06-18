@@ -1,4 +1,12 @@
-module Types (Currency (..)) where
+module Types 
+        ( CommonCurrencyRep
+        , Currency (..)
+        , Expence
+        , ExpenceRep
+        , ExpencesRep
+        , ExpenceWithCommonCurrency
+        , StoredExpences
+        ) where
 
 import Prelude
 
@@ -35,6 +43,7 @@ type ExpenceRep row =
         ( id :: Int
         , date :: Date
         , description :: String
+        , quantity :: Number
         , currency :: Currency
         , amount :: Number
         | row
